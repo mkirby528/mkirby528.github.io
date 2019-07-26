@@ -1,0 +1,28 @@
+#mainNav .navbar-brand {
+  color: lightgrey;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+  color: lightgray;
+
+}
+
+#mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
+  color: rgba( 75, 156, 211,1);
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active {
+  color: rgba( 75, 156, 211,1); !important;
+}
+
+#masthead .btn:hover{
+  background-color: rgba( 75, 156, 211,1);
+  outline: none;
+  border:0;
+  filter: brightness(85%);
+}
+
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
