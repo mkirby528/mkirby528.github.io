@@ -22,6 +22,14 @@
   filter: brightness(85%);
 }
 
+#headshot{
+  max-height: 300px
+}
+
+#work{
+  background-color: rgba( 75, 156, 211,1);
+}
+
 .btn:focus, .btn:active {
   outline: none !important;
   box-shadow: none !important;
