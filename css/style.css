@@ -36,19 +36,22 @@
 }
 
 #allyLogo {
-
   max-width: 246px;
   max-height: 246px;
 }
 
-
 @media (max-width: 768px) {
-     #allyLogo {
-             display: block;
-             margin: auto;
-      }
-   }
-
-  .work-card {
-    background-color: ghostwhite;
+  #allyLogo {
+    display: block;
+    margin: auto;
   }
+}
+
+.work-card {
+  background-color: ghostwhite;
+}
+
+::selection {
+  background: #13294B;
+  color: white;
+}

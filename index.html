@@ -22,6 +22,10 @@
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="css/creative.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+
   <title>Matthew Kirby</title>
 </head>
 
@@ -138,14 +142,14 @@
   </section>
 
   <!-- Work Section -->
-  <section id="work">
-    <div style="background-color:#4B9CD3" class="container">
-      <h2 class="text-center text-white mt-0">Work</h2>
+  <section class='page-section' id="work">
+    <div style="background-color:#4B9CD3" class="container p-600">
+      <h2 class="text-center text-white ">Work</h2>
       <hr style="border-color:white;" class="divider my-4">
       <div class='row align-items-center justify-content-center '>
         <div class="work-card card .mx-auto mb-3" style="max-width: 80%;">
           <div class="row no-gutters">
-            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 col-xl-4">
+            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 col-xl-4 py-3 py-lg-0">
               <img id="allyLogo" src="img/ally.jpg" class="img-fluid" alt="...">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 col-xl-8">
@@ -153,9 +157,8 @@
                 <h5 class="card-title text-center    font-weight-bold">Ally Financial</h5>
                 <h6 class="card-title text-center   font-weight-bold">Consumer Experience Technology Intern</h6>
                 <p class="card-text text-center">
-                  <li>Worked with Node.js, React, Express and ServiceNow APIs to create a tool that automated the proccess of onboarding new hires.</li>
-                  <li>At the end of my internshp I presented this project to company executives.</li>
-
+                  <li>Worked with Node.js, React, Express and ServiceNow APIs to create a tool that automated the proccess of onboarding new hires</li>
+                  <li>Presented this project to company executives at the end of my internship</li>
                 </p>
               </div>
             </div>
@@ -166,15 +169,92 @@
   </section>
 
   <!-- Call to Action Section -->
-  <section class="page-section bg-dark text-white">
-    <div class="container text-center">
-      <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-      <a class="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Download Now!</a>
+  <section style="background-color:white" class="page-section">
+    <div class="container">
+      <h2 class="text-center text-dark ">Skills</h2>
+      <hr style="border-color:white;" class="divider my-4">
+      <canvas class='p-3' style="background-color:lightgrey"id="myChart"></canvas>
+      <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+          responsive: true,
+
+          type: 'bar',
+          data: {
+            labels: ["Java", "MySQL", "HTML/CSS", "JavaScript", "React.js", "Python", "Git/Github", 'C#'],
+            datasets: [{
+              data: [2.99, 2.99, 1.99, 1.99, 1.99, 2.99, 1.99, .99],
+              backgroundColor: [
+                'rgba(255, 99, 132, 0.8)',
+                'rgba(54, 162, 235, 0.8)',
+                'rgba(255, 206, 86, 0.8)',
+                'rgba(75, 192, 192, 0.8)',
+                'rgba(153, 102, 255, 0.8)',
+                'rgba(255, 159, 64, 0.8)'
+              ],
+              borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+              ],
+              borderWidth: 5
+            }]
+          },
+          options: {
+            legend: {
+              display: false
+            },
+            scales: {
+              xAxes: [{
+                display: true,
+                scaleLabel: {
+                  display: true,
+                }
+              }],
+              yAxes: [{
+
+                display: true,
+                scaleLabel: {
+
+                  display: true,
+                },
+                ticks: {
+                  min: 0,
+                  max: 3.5,
+                  stepSize: 1,
+                  fontSize: 24,
+                  fontStyle: "bold",
+                  callback: function(label, index, labels) {
+                    switch (label) {
+                      case 0:
+                        return '';
+                      case 1:
+                        return 'Beginner';
+                      case 2:
+                        return 'Intermediate';
+                      case 3:
+                        return 'Advanced';
+                    }
+                  }
+                },
+                gridLines: {
+                  display: true,
+                  color: 'rgba(0,0,0,.4)',
+                  lineWidth: 3
+                }
+              }]
+            }
+          }
+        });
+      </script>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="page-section" id="contact">
+  <section style='background-color:#4B9CD3' class="page-section" id="contact">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
@@ -204,6 +284,10 @@
     </div>
   </footer>
 
+
+
+
+
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -213,7 +297,7 @@
   <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/creative.min.js"></script>
+  <script src="js/creative.js"></script>
 
 </body>
 
