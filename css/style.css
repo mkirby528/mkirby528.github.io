@@ -4,33 +4,47 @@
 
 #mainNav .navbar-nav .nav-item .nav-link {
   color: lightgray;
-
 }
 
 #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
-  color: rgba( 75, 156, 211,1);
+  color: rgba(75, 156, 211, 1);
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: rgba( 75, 156, 211,1); !important;
+  color: rgba(75, 156, 211, 1);
+   !important;
 }
 
-#masthead .btn:hover{
-  background-color: rgba( 75, 156, 211,1);
+#masthead .btn:hover {
+  background-color: rgba(75, 156, 211, 1);
   outline: none;
-  border:0;
+  border: 0;
   filter: brightness(85%);
 }
 
-#headshot{
+#headshot {
   max-height: 300px
 }
 
-#work{
-  background-color: rgba( 75, 156, 211,1);
+#work {
+  background-color: rgba(75, 156, 211, 1);
 }
 
 .btn:focus, .btn:active {
   outline: none !important;
   box-shadow: none !important;
 }
+
+#allyLogo {
+
+  max-width: 246px;
+  max-height: 246px;
+}
+
+
+@media (max-width: 768px) {
+     #allyLogo {
+             display: block;
+             margin: auto;
+      }
+   }
