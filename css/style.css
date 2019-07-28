@@ -42,7 +42,7 @@
 }
 
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
      #allyLogo {
              display: block;
              margin: auto;
@@ -50,5 +50,5 @@
    }
 
   .work-card {
-    background-color: whitesmoke;
+    background-color: ghostwhite;
   }
