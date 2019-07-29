@@ -53,6 +53,9 @@
             <a class="nav-link js-scroll-trigger" href="#work">Work</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#fun">Fun</a>
           </li>
           <li class="nav-item">
@@ -154,7 +157,7 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 col-xl-8">
               <div class="card-body">
-                <h5 class="card-title text-center    font-weight-bold">Ally Financial</h5>
+                <h5 class="card-title text-center   font-weight-bold">Ally Financial</h5>
                 <h6 class="card-title text-center   font-weight-bold">Consumer Experience Technology Intern</h6>
                 <p class="card-text text-center">
                   <li>Worked with Node.js, React, Express and ServiceNow APIs to create a tool that automated the proccess of onboarding new hires</li>
@@ -169,28 +172,33 @@
   </section>
 
   <!-- Call to Action Section -->
-  <section style="background-color:white" class="page-section">
+  <section style="background-color:white" id='skills' class="page-section">
     <div class="container">
       <h2 class="text-center text-dark ">Skills</h2>
-      <hr style="border-color:white;" class="divider my-4">
-      <canvas class='p-3' style="background-color:lightgrey"id="myChart"></canvas>
+      <hr class="text-dark divider my-4">
+      <canvas class='p-3 d-none d-sm-none d-md-block' style="background-color:lightgrey" id="myChart"></canvas>
       <script>
         var ctx = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(ctx, {
           responsive: true,
-
+          maintainAspectRatio: true,
+          events: [],
           type: 'bar',
           data: {
             labels: ["Java", "MySQL", "HTML/CSS", "JavaScript", "React.js", "Python", "Git/Github", 'C#'],
             datasets: [{
-              data: [2.99, 2.99, 1.99, 1.99, 1.99, 2.99, 1.99, .99],
+              data: [2.99, 1.99, 1.99, 1.99, 1.99, 2.99, 1.99, .99],
               backgroundColor: [
                 'rgba(255, 99, 132, 0.8)',
                 'rgba(54, 162, 235, 0.8)',
                 'rgba(255, 206, 86, 0.8)',
                 'rgba(75, 192, 192, 0.8)',
                 'rgba(153, 102, 255, 0.8)',
-                'rgba(255, 159, 64, 0.8)'
+                'rgba(255, 159, 64, 0.8)',
+                'rgba(0, 0, 128, 0.8)',
+                'rgba(0, 255,127, 0.8)',
+
+
               ],
               borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -198,14 +206,22 @@
                 'rgba(255, 206, 86, 1)',
                 'rgba(75, 192, 192, 1)',
                 'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+                'rgba(255, 159, 64, 1)',
+                'rgba(0, 0, 128, 1)',
+                'rgba(0, 255,127, 1)',
+
               ],
               borderWidth: 5
             }]
           },
           options: {
+            tooltips: {
+              enabled: false
+            },
             legend: {
-              display: false
+              display: false,
+              onClick: function(event, legendItem) {}
+
             },
             scales: {
               xAxes: [{
@@ -225,7 +241,7 @@
                   min: 0,
                   max: 3.5,
                   stepSize: 1,
-                  fontSize: 24,
+                  fontSize: 16,
                   fontStyle: "bold",
                   callback: function(label, index, labels) {
                     switch (label) {
@@ -250,6 +266,13 @@
           }
         });
       </script>
+      <div class='d-block d-sm-block d-md-none'>
+        <p><strong>Advanced: </strong>Java, Python</p>
+        <p><strong>Intermediate: </strong>MySQL,HTML/CSS, JavaScript,React.js, Git/Github</p>
+        <p><strong>Beginner: </strong>C#</p>
+
+      </div>
+
     </div>
   </section>
 
