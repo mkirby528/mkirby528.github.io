@@ -176,7 +176,7 @@
     <div class="container">
       <h2 class="text-center text-dark ">Skills</h2>
       <hr class="text-dark divider my-4">
-      <canvas class='p-3 d-none d-sm-none d-md-block' style="background-color:lightgrey" id="myChart"></canvas>
+      <canvas class='p-3 d-none d-sm-none d-md-block' style="background-color:#F0F0F0" id="myChart"></canvas>
       <script>
         var ctx = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(ctx, {
@@ -228,7 +228,12 @@
                 display: true,
                 scaleLabel: {
                   display: true,
-                }
+                },
+                ticks: {
+                  fontColor: "black",
+                  fontSize: 16,
+                  fontStyle: "bold", // this here
+                },
               }],
               yAxes: [{
 
@@ -240,6 +245,8 @@
                 ticks: {
                   min: 0,
                   max: 3.5,
+                  fontColor: "black",
+
                   stepSize: 1,
                   fontSize: 16,
                   fontStyle: "bold",
@@ -277,50 +284,61 @@
   </section>
 
   <!-- Contact Section -->
-  <section style='background-color:#4B9CD3' class="page-section" id="contact">
+  <section style='background-color:#4B9CD3' class="page-section" id="fun">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <h2 class="mt-0">Let's Get In Touch!</h2>
-          <hr class="divider my-4">
-          <p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!</p>
-        </div>
-      </div>
+      <h2 class="text-center text-white mt-0">Fun</h2>
+      <hr class="divider my-4">
       <div class="row">
-        <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-          <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-          <div>+1 (202) 555-0149</div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="hovereffect">
+            <img src='img/coffee.jpg' class='img-thumbnail img-fluid'></img>
+            <div class="overlay">
+              <h2>Coffee</h2>
+              <p>I'm an huge coffeeholic and try to visit as many local coffee shops as I can. </p>
+              <a class="info" href="coffee.html">Read More!</a>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-4 mr-auto text-center">
-          <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-          <!-- Make sure to change the email address in anchor text AND the link below! -->
-          <a class="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="hovereffect">
+            <img src='img/books2.jpg' class='img-thumbnail img-fluid'></img>
+            <div class="overlay">
+              <h2>Books</h2>
+              <p>I'm an avid reader and love anything from classics to science fiction. </p>
+              <a class="info" target= '_blank' href="https://www.goodreads.com/review/list/62788857-matthew-kirby?search%5Bquery%5D=&sort=rating&utf8=%E2%9C%93">My Goodreads!</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="hovereffect">
+            <img src='img/music.jpg' class='img-thumbnail img-fluid'></img>
+            <div class="overlay">
+              <h2>Music</h2>
+              <p>I love to listen to music and have a vast array of genres that I like. </p>
+              <a class="info" target= '_blank' href="https://open.spotify.com/user/mkirby528?si=AkSm2jhiQqi40fT73BkjoA">My Spotify!</a>
+            </div>
+          </div>        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <img src='img/games.jpeg' class='img-thumbnail img-fluid'></img>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-light py-5">
-    <div class="container">
-      <div class="small text-center text-muted">Copyright &copy; 2019 - Start Bootstrap</div>
-    </div>
-  </footer>
+    </footer>
 
 
 
 
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-  <!-- Custom scripts for this template -->
-  <script src="js/creative.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.js"></script>
 
 </body>
 
