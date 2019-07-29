@@ -156,7 +156,8 @@
 @media (max-width: 768px) {
 
   .hovereffect{
-    margin: 30px;
+    margin-top: 30px;
+
   }
   .hovereffect a.info, button.info: {
     box-shadow: 0 0 5px #fff;
