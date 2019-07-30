@@ -15,7 +15,7 @@
    !important;
 }
 
-#masthead .btn:hover {
+ .btn:hover {
   background-color: rgba(75, 156, 211, 1);
   outline: none;
   border: 0;
@@ -31,8 +31,21 @@
 }
 
 .btn:focus, .btn:active {
+  background-color: rgba(75, 156, 211, 1);
+
   outline: none !important;
   box-shadow: none !important;
+}
+
+input:focus, input:active{
+  background-color: rgba(75, 156, 211, 1);
+
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+input:active{
+  background-color: aliceblue;
 }
 
 #allyLogo {
@@ -188,5 +201,36 @@
   .hovereffect a.info, button.info {
     -webkit-transition-delay: .2s;
     transition-delay: .2s;
+  }
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: rgba(75, 156, 211, .8);;
+    border-color: rgba(75, 156, 211, 1);;
+}
+
+a:hover {
+    color: #13294B;
+    text-decoration: underline;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-dialog {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+}
+@media(max-width: 768px) {
+  .modal-dialog {
+    min-height: calc(100vh - 20px);
   }
 }
