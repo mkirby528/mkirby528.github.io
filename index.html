@@ -7,13 +7,18 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144762198-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'UA-144762198-1');
     gtag('create', 'UA-144762198-1', 'auto');
 
-    gtag('set', {'user_id': 'USER_ID'}); // Set the user ID using signed-in user_id.
+    gtag('set', {
+      'user_id': 'USER_ID'
+    }); // Set the user ID using signed-in user_id.
     ga('set', 'userId', 'USER_ID'); // Set the user ID using signed-in user_id.
   </script>
 
@@ -39,7 +44,6 @@
   <link href="css/style.css" rel="stylesheet">
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-
 
   <title>Matthew Kirby</title>
 </head>
@@ -200,9 +204,9 @@
           events: [],
           type: 'bar',
           data: {
-            labels: ["Java", "MySQL", "HTML/CSS", "JavaScript", "React.js", "Python", "Git/Github", 'C#'],
+            labels: ["Java", "MySQL", "HTML/CSS", "JavaScript", "React.js", "Python", "Git/Github", 'C#', 'Ansible'],
             datasets: [{
-              data: [2.99, 1.99, 1.99, 1.99, 1.99, 2.99, 1.99, .99],
+              data: [2.99, 1.99, 1.99, 1.99, 1.99, 2.99, 1.99, .99, .99],
               backgroundColor: [
                 'rgba(255, 99, 132, 0.8)',
                 'rgba(54, 162, 235, 0.8)',
@@ -212,6 +216,7 @@
                 'rgba(255, 159, 64, 0.8)',
                 'rgba(0, 0, 128, 0.8)',
                 'rgba(0, 255,127, 0.8)',
+                'rgba(255,0,255,.8)'
 
 
               ],
@@ -224,6 +229,8 @@
                 'rgba(255, 159, 64, 1)',
                 'rgba(0, 0, 128, 1)',
                 'rgba(0, 255,127, 1)',
+                'rgba(255,0,255,1)'
+
 
               ],
               borderWidth: 5
@@ -329,39 +336,151 @@
             <img src='img/music.jpg' class='img-thumbnail img-fluid'></img>
             <div class="overlay">
               <h2>Music</h2>
-              <p >I love to listen to music and have a vast array of genres that I like. </p>
+              <p>I love to listen to music and have a vast array of genres that I like. </p>
               <a class="info" target='_blank' href="https://open.spotify.com/user/mkirby528?si=AkSm2jhiQqi40fT73BkjoA">My Spotify!</a>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="hovereffect">
-            <img src='img/games.jpeg' class='img-thumbnail img-fluid'></img>
+            <img src='img/travel.jpg' class='img-thumbnail img-fluid'></img>
             <div class="overlay">
-              <h2>Games</h2>
-              <p> </p>
-              <button class="info" >My favorite games!</a>
+              <h2>Travel</h2>
+              <p>I enjoy to travel and have been to some cool cities. </p>
+
+
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Launch demo modal
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
             </div>
           </div>
         </div>
       </div>
     </div>
-    </footer>
+  </section>
+
+  <!-- Contact section -->
+  <section class="page-section" id="contact">
+    <div class="container">
+
+      <!-- Contact Jason Row -->
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="section-heading">
+
+            <!-- Attempting to avoid spam by removing @ and the dot in my domain -->
+            Contact Matthew</h2>
+          <hr class="primary">
+          <p>You can send Matthew a message using the form below.</p>
+
+          <!-- Really avoiding spam by sending emails to the spam box
+             Docs URL: https://formspree.io/
+             Also, Bootstrap forms: https://getbootstrap.com/docs/3.3/css/#forms -->
+          <form action="https://formspree.io/mkirby528@unc.edu" method="POST" class="form-horizontal" role="form">
+            <!-- Need a name, reply to email, and a message -->
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Your Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <textarea name="message" placeholder="Your message" class="form-control"></textarea>
+            </div>
+            <!-- Hidden elements here -->
+            <input type="hidden" name="_subject" value="New email from Contact Me Form!" class="form-control">
+            <input type="hidden" name="_next" value="thanks.html" />
+            <!-- Submit button -->
+            <div class="form-group">
+              <input type="submit" value="Email Matthew " class="btn btn-primary btn-xl">
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <p>You can also find his personal email, LinkedIn and GitHub below too.</p>
+        </div>
+      </div>
+
+      <!-- Email, LinkedIn, and GitHub links -->
+      <div class="row">
+
+        <div class="col-4 col-sm-4 col-lg-2 offset-lg-3 text-center">
+          <a href="mailto:jason[AT]downing[DOT]io">
+            <i class="fa fa-envelope fa-4x sr-icons"></i>
+          </a>
+          <p><a href="mailto:jason[AT]downing[DOT]io" class="text-blue">Email</a></p>
+        </div>
+
+        <div class="col-4 col-sm-4 col-lg-2 text-center">
+          <a href="https://www.linkedin.com/in/jasonpdowning">
+            <i class="fa fa-linkedin-square fa-4x sr-icons"></i>
+          </a>
+          <p><a href="https://www.linkedin.com/in/jasonpdowning" class="text-blue">LinkedIn</a></p>
+        </div>
+
+        <div class="col-4 col-sm-4 col-lg-2 text-center">
+          <a href="https://github.com/JasonD94">
+            <i class="fa fa-github-square fa-4x sr-icons"></i>
+          </a>
+          <p><a href="https://github.com/JasonD94" class="text-blue">GitHub</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <p class="text-center text-muted text-small mb-1">
+      Matthew Kirby&copy; 2019. All rights reserved.
+      Powered by <a href="http://www.getbootstrap.com/" class="text-blue">Bootstrap</a>.
+    </p>
+    <p class="text-center text-muted text-small">
+      Source on <a href="https://github.com/mkirby528/mkirby528.github.io" class="text-blue">GitHub</a>.
+      Theme based on the
+      <a href="http://startbootstrap.com/template-overviews/creative/" class="text-blue">Creative Bootstrap Theme</a>
+      by <a href="http://startbootstrap.com/" class="text-blue">Start Bootstrap</a>.
+    </p>
+  </div>
 
 
 
 
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/creative.js"></script>
+  <!-- Custom scripts for this template -->
+  <script src="js/creative.js"></script>
 
 </body>
 
