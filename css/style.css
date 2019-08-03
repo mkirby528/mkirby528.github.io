@@ -77,6 +77,7 @@ input:active{
   position: relative;
   text-align: center;
   cursor: default;
+  justify-content: center;
 }
 
 .hovereffect .overlay {
@@ -233,4 +234,17 @@ a:hover {
   .modal-dialog {
     min-height: calc(100vh - 20px);
   }
+}
+
+
+#footer{
+  background-color:gray;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#botText{
+  margin: 0;
+  padding: 0;
 }
