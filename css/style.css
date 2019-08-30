@@ -1,6 +1,11 @@
 #mainNav .navbar-brand {
   color: lightgrey;
 }
+@media only screen and (max-width: 768px) {
+  #mainNav .navbar-brand {
+    color: #212529;
+  }
+}
 
 #mainNav .navbar-nav .nav-item .nav-link {
   color: lightgray;
@@ -11,9 +16,10 @@
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: rgba(75, 156, 211, 1);
-   !important;
+  color: rgba(75, 156, 211, 1) !important;
 }
+
+
 
  .btn:hover {
   background-color: rgba(75, 156, 211, 1);
