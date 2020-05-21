@@ -266,3 +266,32 @@ a:hover {
   font-size: 24px;
 }
 
+
+#wrapper {
+  margin: auto;
+
+  margin-bottom: 30px;
+  width: 40%;
+  height: 50px;
+  color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#hi{
+  margin:auto;
+  font-size: 1.8em;
+}
+
+
+#hi:after {
+	content: "";
+	animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  0% { content:"Developer."; }
+  50% { content:"Coffee Addict."; }
+  100% { content:"Bookworm."; }
+}
