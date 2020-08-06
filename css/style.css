@@ -60,6 +60,10 @@ input:active {
   max-height: 246px;
 }
 
+#c1Logo{
+  max-width: 246px;
+}
+
 @media (max-width: 768px) {
   #allyLogo {
     display: block;
